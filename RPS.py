@@ -38,6 +38,7 @@ while True:
 	pChoice = input("Enter r (rock), p (paper), s (scissors), q (to quit): ")
 	# deal with player entering q
 	if pChoice == "q":
+		print(pName + " has quit the match")
 		break
 	# get computers choice(random)
 	cChoice = random.choice(computerChoices)
@@ -67,13 +68,14 @@ while True:
 			print("Computer picked Rock")
 			print("Paper covers Rock")
 			pScore = pScore + 1
-		elif cChoice = "p":
+		elif cChoice == "p":
 			print("Computer picked Paper")
 			print("This is a tie")
 			ties = ties + 1
 		else:
 			print("Computer picked Scissors")
 			print("Scissors cuts Paper")
+			cScore = cScore + 1
 		pass
 	# compare for player entering s
 	elif pChoice == "s":
@@ -81,11 +83,11 @@ while True:
 		if cChoice == "r":
 			print("Computer picked Rock")
 			print("Rock breaks Scissors")
-			cChoice = cChoice + 1
+			cScore = cScore + 1
 		elif cChoice == "p":
 			print("Computer picked Paper")
 			print("Scissors cuts Paper")
-			pChoice = pChoice + 1
+			pScore = pScore + 1
 		else:
 			print("Computer picked Scissors")
 			print("This is a tie")
