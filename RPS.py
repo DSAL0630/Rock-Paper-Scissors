@@ -1,5 +1,6 @@
 # Name
 # Rock Paper Scissors
+# added comment
 # VARIABLES
 import random
 
